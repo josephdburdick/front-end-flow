@@ -1,0 +1,108 @@
+$directions: top, bottom, left, right;
+@each $direction in $directions{
+  .gutter--#{$direction}{
+    margin-#{$direction}: $grid-gutter-width-base;
+  }
+  .padding--#{$direction}{
+    padding-#{$direction}: $grid-gutter-width-base;
+  }
+}
+html,body{
+  height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+.d-inline-flex {
+  display: inline-flex;
+  flex-direction: column;
+}
+.flexbox .container {
+
+  @include media-breakpoint-up(lg) {
+    width: calc(#{map-get($grid-breakpoints, "lg")} + #{$grid-gutter-width-base});
+  }
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}
+
+.flexbox .row{
+
+  &--no-gutter {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+
+    & > [class*="col-"],
+    & > [class*=" col-"]{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &--half-gutter {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: -#{$grid-gutter-width-base / 4};
+    margin-left: -#{$grid-gutter-width-base / 4};
+
+    & > [class*="col-"],
+    & > [class*=" col-"]{
+      padding-right: #{$grid-gutter-width-base / 4};
+      padding-left: #{$grid-gutter-width-base / 4};
+    }
+  }
+
+  &--double-gutter {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: -#{$grid-gutter-width-base};
+    margin-left: -#{$grid-gutter-width-base};
+
+    & > [class*="col-"],
+    & > [class*=" col-"]{
+      padding-right: #{$grid-gutter-width-base};
+      padding-left: #{$grid-gutter-width-base};
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-right: -#{$grid-gutter-width-base / 2};
+      margin-left: -#{$grid-gutter-width-base / 2};
+
+      & > [class*="col-"],
+      & > [class*=" col-"]{
+        padding-right: #{$grid-gutter-width-base / 2};
+        padding-left: #{$grid-gutter-width-base / 2};
+      }
+    }
+  }
+
+  &--quadruple-gutter {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: -#{$grid-gutter-width-base * 2};
+    margin-left: -#{$grid-gutter-width-base * 2};
+
+    & > [class*="col-"],
+    & > [class*=" col-"]{
+      padding-right: #{$grid-gutter-width-base * 2};
+      padding-left: #{$grid-gutter-width-base * 2};
+    }
+  }
+}

@@ -1,0 +1,28 @@
+$icon-font-path: '../fonts/';
+@import 'utilities/mixins';
+// @import 'utilities/variables';
+// bower:scss
+@import 'bower_components/bootstrap/scss/bootstrap.scss';
+// endbower
+@import 'utilities/fonts';
+@import 'utilities/grid';
+@import 'utilities/helpers';
+
+
+/*
+
+Components
+*/
+@import 'components/bg';
+@import 'components/headings';
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/modals';
+
+/*
+
+Templates
+*/
+@import 'templates/template-index';
+@import 'templates/template-name';
