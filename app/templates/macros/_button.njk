@@ -1,0 +1,5 @@
+{% macro button(class="default", text="Button Text", size='', outline=false) %}
+  <button type="button" class="btn {% if size %}btn-{{size}}{% endif %} btn-{{ class }} {% if outline %}btn-outline-{{class}}{% endif %}" role="button">
+    {{ text | safe }}
+  </button>
+{% endmacro %}
