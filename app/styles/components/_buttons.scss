@@ -1,3 +1,4 @@
 .btn{
   @include futura('book');
+  transition: all .05s ease-in;
 }
