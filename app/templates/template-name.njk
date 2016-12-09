@@ -4,7 +4,7 @@
   {% set imageDir = global.dir.images %}
   {% set data = global.views.groupCleanse %}
 
-  {% include "components/header.njk" %}
+  {% include "components/_header.njk" %}
   <!-- MAIN -->
   <main role="main" class="main-body mt-3 mb-3">
     <div class="container ">
@@ -15,18 +15,18 @@
       </div>
 
       <section class="mt-2">
-        {% include "components/buttons.njk" %}
+        {% include "components/_buttons.njk" %}
       </section>
       {# <section class="mt-2">
-        {% include "components/tables.njk" %}
+        {% include "components/_tables.njk" %}
       </section> #}
       <section class="mt-2">
-        {% include "components/alerts.njk" %}
+        {% include "components/_alerts.njk" %}
       </section>
     </div>
     <!-- /container -->
   </main>
   <!-- / MAIN -->
-  {% include "components/footer.njk" %}
+  {% include "components/_footer.njk" %}
 
 {% endblock %}
