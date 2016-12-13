@@ -1,5 +1,8 @@
-import index from './index';
-import templateName from './template-name';
+import header from './components/header';
+import footer from './components/footer';
+
+import index from './templates/index';
+import templateName from './templates/template-name';
 
 const global = {
   title: "Global Site Title",
@@ -9,6 +12,10 @@ const global = {
   },
   icons: {
     btnClose: "icon__btn-x.png"
+  },
+  components: {
+    header,
+    footer
   },
   views: {
     index,

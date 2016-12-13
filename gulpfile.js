@@ -36,12 +36,12 @@ const C = (() => {
     filePath.push('js');
     return filePath.join('.');
   };
-  this.getFilePath = (file) => `${__dirname}/.tmp/data/${this.getFileName(file)}`;
+  this.getFilePath = (file) => `${__dirname}/.tmp/data/templates/${this.getFileName(file)}`;
   return this;
 })();
 
 gulp.task('data', () => {
-  return gulp.src('app/data/*.js')
+  return gulp.src('app/data/**/*.js')
     .pipe($.plumber({errorHandler: $.notify.onError("Error: <%= error.message %>")}))
     .pipe($.babel())
     .pipe(gulp.dest('.tmp/data'))
@@ -82,7 +82,6 @@ gulp.task('bundle:data', ['data'], () => {
   .pipe(source('global.js', './.tmp/data'))
   .pipe(buffer())
   .pipe($.sourcemaps.init({loadMaps: true}))
-  // .pipe($.babel())
   .pipe($.sourcemaps.write('.'))
   .pipe(gulp.dest('./test/data'));
 });
@@ -224,6 +223,7 @@ gulp.task('serve', () => {
     gulp.watch([
       'app/*.html',
       'app/images/**/*',
+      'app/data/**/*',
       '.tmp/fonts/**/*'
     ]).on('change', reload);
 
