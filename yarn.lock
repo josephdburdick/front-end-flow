@@ -4019,10 +4019,6 @@ modify-babel-preset@^2.1.1:
   dependencies:
     require-relative "^0.8.7"
 
-moment:
-  version "2.17.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.17.0.tgz#a4c292e02aac5ddefb29a6eed24f51938dd3b74f"
-
 mout@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/mout/-/mout-1.0.0.tgz#9bdf1d4af57d66d47cb353a6335a3281098e1501"
