@@ -3,12 +3,14 @@ Static front-end development workflow featuring Gulp, ES6, Sass, and Nunjucks te
 
 ## Prerequisites
 1. Install [Node.js](https://nodejs.org/en/download/)
-2. Install Bower `npm i bower -g`
-3. Install Yarn `npm i yarn -g`
+2. Install [Gulp.js](http://gulpjs.com)
+3. Install Bower `npm i bower -g`
+4. Install Yarn `npm i yarn -g`
 
 ## Installation
 1. run `yarn` in project root to install Node dependencies
 2. run `bower install` in project root to install Bower dependencies
+3. run `gulp wiredep` in project root to inject Bower dependencies
 
 ## Usage
 1. run `npm start` or `gulp serve` to watch changes in `app` (changes to `app/data` needs a whole restart)
