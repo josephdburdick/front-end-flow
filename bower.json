@@ -7,6 +7,12 @@
     "modernizr": "~2.8.1"
   },
   "overrides": {
+    "bootstrap": {
+      "main": [
+        "scss/bootstrap.scss",
+        "dist/js/bootstrap.js"
+      ]
+    },
     "font-awesome": {
       "main": [
         "css/font-awesome.css",
