@@ -1,9 +1,6 @@
 {% extends "layout/_layout.njk" %}
 
 {% block content %}
-  {% set imageDir = global.dir.images %}
-  {% set data = global.views.groupCleanse %}
-
   <!-- MAIN -->
   <main role="main" class="main-body mt-3 mb-3">
     <div class="container ">
@@ -26,5 +23,12 @@
     <!-- /container -->
   </main>
   <!-- / MAIN -->
+
+  <!-- TODO: Remove for production -->
+  <script type="text/javascript">
+    var dump = ({{global | dump | safe}})
+    console.log(dump);
+    console.log(dump.views['templateName']);
+  </script>
 
 {% endblock %}
